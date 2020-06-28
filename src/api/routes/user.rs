@@ -2,8 +2,8 @@ use crate::api::misc::structs::{Credentials, EntityStringId, Page, PageData};
 use crate::core::user::entity::{AbstractUser, AccessLevel, User};
 use crate::core::user::service::Service;
 use crate::utils::errors::{Error, ErrorCode, Success};
-
 use crate::api::guards::auth::{ClaimResult, Claims};
+
 use rocket::Rocket;
 use rocket_contrib::json::Json;
 use serde_json::Value;
@@ -122,7 +122,7 @@ fn get(claims: ClaimResult) -> Result<Json<Value>, Error> {
     return Ok(Json(json!({
         "id": claims.id,
         "access_level": claims.access_level
-    })))
+    })));
 }
 
 pub fn fuel(rocket: Rocket) -> Rocket {

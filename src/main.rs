@@ -42,10 +42,9 @@ fn main() {
 
     run_migrations(&logger);
 
-
-    let mut rocket = rocket::ignite().manage(utils::db::pool())
+    let mut rocket = rocket::ignite()
+        .manage(utils::db::pool())
         .attach(api::fairings::cors::fairing());
-
 
     rocket = rocket.manage(logger);
     rocket = api::routes::fuel(rocket);
