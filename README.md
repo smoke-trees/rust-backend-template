@@ -15,7 +15,7 @@
 - Initialize your new rust project with the template by using: <br>
 `git clone https://github.com/smoke-trees/rust-backend-template`
 
-- Create a `.env` file in the root directory of your project and add the `DATABASE_URL` variable
+- Create a `.env` file in the root directory of your project and set the `DATABASE_URL` variable
 
 - Run `diesel setup` to create the database.
 
