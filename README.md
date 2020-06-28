@@ -26,6 +26,12 @@ are written under migrations.
 <br>
 <br>
 
+<strong> Notes: </strong>
+<br><br>
+
+- Running migrations manually is only needed during development. The migrations are embedded in the binary and are executed at runtime during production.
+
+
 <strong>Related links: </strong>
 
 - Rocket: https://rocket.rs/
